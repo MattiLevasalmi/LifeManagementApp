@@ -14,11 +14,12 @@
                 VerticalOptions="Center"
                 Text="Weather at " />
             <Entry
-                x:Name="Latitude"
-                Placeholder="Latitude" />
-            <Entry
-                x:Name="Longitude"
-                Placeholder="Longitude" />
+                x:Name="CityName"
+                Placeholder="City" />
+            <Label
+                x:Name="Country"
+                VerticalOptions="Center"
+                Text="--" />
         </HorizontalStackLayout>
         
 
@@ -27,20 +28,20 @@
             HorizontalOptions="Center">
             <Label
                 x:Name="Low"
-                Text="Todays Low: " />
+                Text="Todays Low: --" />
             <Label
                 x:Name="High"
-                Text="Todays High: " />
+                Text="Todays High: --" />
         </HorizontalStackLayout>
         <HorizontalStackLayout
             Spacing="50"
             HorizontalOptions="Center">
             <Label
                 x:Name="Rain"
-                Text="Rain Forecast: " />
+                Text="Rain Forecast: --" />
             <Label
                 x:Name="Wind"
-                Text="Max Wind Speed: " />
+                Text="Max Wind Speed: --" />
         </HorizontalStackLayout>
         <Label
             x:Name="Wind_Alert"
