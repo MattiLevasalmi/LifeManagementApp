@@ -14,8 +14,12 @@
             Route="MainPage" />
         <ShellContent
             Title="Weather"
-            ContentTemplate="{DataTemplate local:Weather}"
-            Route="WeatherPage" />
+            ContentTemplate="{DataTemplate local:WeatherDisplay}"
+            Route="WeatherDisplay" />
+        <ShellContent
+            Title="To Do"
+            ContentTemplate="{DataTemplate local:TodoPage}"
+            Route="TodoPage" />
     </TabBar>
 
 </Shell>
