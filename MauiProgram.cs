@@ -1,4 +1,5 @@
-﻿using LifeManagementApp.ViewModel;
+﻿using LifeManagementApp.DbManager;
+using LifeManagementApp.ViewModel;
 using Microsoft.Extensions.Logging;
 
 namespace LifeManagementApp
@@ -18,6 +19,7 @@ namespace LifeManagementApp
 
             builder.Services.AddSingleton<TodoPage>();
             builder.Services.AddSingleton<TaskViewModel>();
+            builder.Services.AddSingleton<TodoContext>();
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

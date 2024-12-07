@@ -47,24 +47,28 @@
                         <Button Grid.Row="0" Grid.Column="2"
                                 Text="Delete"
                                 BackgroundColor="Red"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TaskViewModel}}, Path=DeleteCommand}"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TaskViewModel}}, Path=DeleteTaskCommand}"
                                 CommandParameter="{Binding .}" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate x:DataType="LifeManagementApp:Tasks">
-                    <Grid RowDefinitions="50" ColumnDefinitions="9*,1*">
-                        <BoxView Grid.ColumnSpan="2"
+                    <Grid RowDefinitions="50" ColumnDefinitions="8*,1*,1*">
+                        <BoxView Grid.ColumnSpan="3"
                                  Color="Black"
                                  CornerRadius="10,10,0,0" />
                         <Label Grid.Row="0" Grid.Column="0"
                                Text="{Binding Name}"
                                VerticalOptions="Center"
                                Padding="10"/>
-                        <Button Grid.Row="0" Grid.Column="2"
+                        <Button Grid.Row="0" Grid.Column="1"
                                 Text="Add" 
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TaskViewModel}}, Path=AddCommand}"
+                                CommandParameter="{Binding .}"/>
+                        <Button Grid.Row="0" Grid.Column="2"
+                                Text="Delete" 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TaskViewModel}}, Path=DeleteCategoryCommand}"
                                 CommandParameter="{Binding .}"/>
                     </Grid>
                 </DataTemplate>
